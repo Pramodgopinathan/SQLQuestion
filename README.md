@@ -84,3 +84,29 @@ DROP COSTRAINT fk_product;
 
 DELET FROM PRODUCT WHERE Price_RS >= 10000;
 ```
+### UNION
+The UNION operator is used to combine the result-set of two or more SELECT statements.
+### UNION ALL
+The UNION operator is used to combine the result-set of two or more SELECT statements with duplicated
+### MINUS
+The SQL MINUS operator is used to return all rows in the first SELECT statement that are not returned by the second SELECT statement. Each SELECT statement will define a dataset. The MINUS operator will retrieve all records from the first dataset and then remove from the results all records from the second dataset.
+### INTERSECT
+The SQL INTERSECT operator is used to return the results of 2 or more SELECT statements. However, it only returns the rows selected by all queries or data sets. If a record exists in one query and not in the other, it will be omitted from the INTERSECT results.
+
+``` SQL
+
+Create table FIRST (
+	ID number,
+	Name varchar2(50)
+);
+
+Create table SECOND (
+	ID number,
+	Name varchar2(50)
+);
+
+Select * from FIRST
+Union OR Union All OR Minus OR INTERSECT
+Select * from Second;
+
+```
