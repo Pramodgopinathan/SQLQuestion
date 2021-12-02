@@ -35,10 +35,27 @@ create table SALEITEM (
  
 ```
 
+### Insert 5 records in each table.
+
+``` SQL
+
 insert into PRODUCT values (1111,'col1','col2',70000);
 insert into PRODUCT values (1112,'col2','col3',65000);
 insert into PRODUCT values (1113,'col3','col4',65000);
 insert into PRODUCT values (1114,'col4','col5',85000);
 insert into PRODUCT values (1115,'col5','col6',95000);
 
+insert into SALE values (1, 'test', 2323);
+insert into SALE values (2, 'test1', 23231);
+insert into SALE values (3, 'test2', 23232);
+insert into SALE values (4, 'test3', 23233);
+insert into SALE values (5, 'test4', 23234);
+
+insert into SALEITEM values (200201, 1000201, 10);
+insert into SALEITEM values (200202, 1000211, 11);
+insert into SALEITEM values (200203, 1000221, 12);
+insert into SALEITEM values (200204, 1000231, 13);
+insert into SALEITEM values (200205, 1000241, 14);
+
+``` 
 select * from PRODUCT;
