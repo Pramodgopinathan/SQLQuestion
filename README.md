@@ -58,4 +58,26 @@ insert into SALEITEM values (200204, 1000231, 13);
 insert into SALEITEM values (200205, 1000241, 14);
 
 ``` 
+### List all records from the PRODUCT, SALE and SALEITEM table.
+
+``` SQL
 select * from PRODUCT;
+select * from SALE;
+select * from SALEITEM;
+
+```
+
+### Update the price of one of your products in the PRODUCT table to cost Rs.100 more than original price.
+
+``` SQL
+UPDATE PRODUCT
+	SET Prices_Rs = Prices_Rs + 100
+	WHERE ProductID = 1111;
+	
+```
+### Delete all products with price higher than 10,000 from your PRODUCT table. 
+(Hint: You can insert such a product first and then use this command to delete it for testing purposes)
+ALTER TABLE SALEITEM
+DROP COSTRAINT fk_product;
+
+DELET FROM PRODUCT WHERE Price_RS >= 10000;
