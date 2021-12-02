@@ -15,6 +15,24 @@ create table PRODUCT (
 	constraint pk_product primary key (ProductID)
 );
 
+create table SALE (
+	SaleID number default 0,
+	DeliveryAddress varchar2(100) not null,
+	constraint pk_sale primary key (SaleID)
+);
+
+
+create table SALEITEM (
+	SaleID number default 0,
+	ProductID number default 0,
+	Quantity number,
+
+	constraint fk_sale foreign key (SaleID)
+		references SALE (SaleID),
+	constraint fk_product foreign key (ProductID)
+		references PRODUCT (ProductID)
+);
+ 
 ```
 
 insert into PRODUCT values (1111,'col1','col2',70000);
