@@ -77,7 +77,10 @@ UPDATE PRODUCT
 ```
 ### Delete all products with price higher than 10,000 from your PRODUCT table. 
 (Hint: You can insert such a product first and then use this command to delete it for testing purposes)
+
+``` SQL
 ALTER TABLE SALEITEM
 DROP COSTRAINT fk_product;
 
 DELET FROM PRODUCT WHERE Price_RS >= 10000;
+```
